@@ -24,7 +24,7 @@
             {
                 "data": 
                 {
-                    "url": "https://raw.githubusercontent.com/rizlanhkm/FIT3179_a2/main/csv_data/fossils_co2_total_by_country.csv"
+                    "url": "https://raw.githubusercontent.com/rizlanhkm/FIT3179_a2/refs/heads/main/csv_data/fossils_co2_total_by_country.csv"
                 },
             "key": "Country",
             "fields": ["2021"]

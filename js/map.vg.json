@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "CO2 emissions by country in 2021",
   "width": 800,
   "height": 600,
   "projection": 
@@ -37,7 +38,7 @@
         "scheme": "reds",
         "type": "log"
       },
-      "legend": {"title": "CO2 Emissions in 2021"}
+      "legend": {"title": "CO2 Emission in Mt"}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},

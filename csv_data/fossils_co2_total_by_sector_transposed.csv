@@ -1,0 +1,261 @@
+Sector,Year,CO2 Emissions
+Buildings,1970,2940.539924
+Buildings,1971,2952.238409
+Buildings,1972,3062.696991
+Buildings,1973,3125.214595
+Buildings,1974,3045.859502
+Buildings,1975,3122.762971
+Buildings,1976,3247.305858
+Buildings,1977,3266.012707
+Buildings,1978,3364.945308
+Buildings,1979,3404.271943
+Buildings,1980,3253.832922
+Buildings,1981,3192.73084
+Buildings,1982,3175.76998
+Buildings,1983,3185.36179
+Buildings,1984,3300.857613
+Buildings,1985,3381.524022
+Buildings,1986,3422.890287
+Buildings,1987,3481.941882
+Buildings,1988,3556.497899
+Buildings,1989,3490.415967
+Buildings,1990,3355.899639
+Buildings,1991,3381.267914
+Buildings,1992,3189.658852
+Buildings,1993,3262.170762
+Buildings,1994,3152.290985
+Buildings,1995,3177.60255
+Buildings,1996,3174.170505
+Buildings,1997,3199.172995
+Buildings,1998,3024.3221
+Buildings,1999,3105.216668
+Buildings,2000,3038.499395
+Buildings,2001,3074.904057
+Buildings,2002,3075.095189
+Buildings,2003,3177.75058
+Buildings,2004,3253.609372
+Buildings,2005,3273.869403
+Buildings,2006,3251.480499
+Buildings,2007,3251.876295
+Buildings,2008,3323.75014
+Buildings,2009,3260.917489
+Buildings,2010,3330.220053
+Buildings,2011,3263.630071
+Buildings,2012,3231.007411
+Buildings,2013,3350.7638
+Buildings,2014,3293.621941
+Buildings,2015,3319.621315
+Buildings,2016,3360.415103
+Buildings,2017,3423.108974
+Buildings,2018,3447.962712
+Buildings,2019,3384.130976
+Buildings,2020,3246.715431
+Buildings,2021,3412.134005
+Other industrial combustion,1970,4589.859821
+Other industrial combustion,1971,4320.400852
+Other industrial combustion,1972,4455.864846
+Other industrial combustion,1973,4731.423739
+Other industrial combustion,1974,4739.293071
+Other industrial combustion,1975,4560.394841
+Other industrial combustion,1976,4775.577137
+Other industrial combustion,1977,4982.986658
+Other industrial combustion,1978,5091.550215
+Other industrial combustion,1979,5295.961465
+Other industrial combustion,1980,5184.62718
+Other industrial combustion,1981,5023.928746
+Other industrial combustion,1982,4884.793504
+Other industrial combustion,1983,4796.592267
+Other industrial combustion,1984,4955.768342
+Other industrial combustion,1985,4915.657804
+Other industrial combustion,1986,4931.556552
+Other industrial combustion,1987,5100.375978
+Other industrial combustion,1988,5267.26061
+Other industrial combustion,1989,5296.864041
+Other industrial combustion,1990,4923.883083
+Other industrial combustion,1991,4839.074713
+Other industrial combustion,1992,4726.820479
+Other industrial combustion,1993,4707.165099
+Other industrial combustion,1994,4745.117566
+Other industrial combustion,1995,5003.820331
+Other industrial combustion,1996,4911.131726
+Other industrial combustion,1997,4989.001787
+Other industrial combustion,1998,5034.63463
+Other industrial combustion,1999,4861.144895
+Other industrial combustion,2000,5067.139997
+Other industrial combustion,2001,5134.659763
+Other industrial combustion,2002,5189.01247
+Other industrial combustion,2003,5437.317442
+Other industrial combustion,2004,5877.992677
+Other industrial combustion,2005,6328.772289
+Other industrial combustion,2006,6630.101249
+Other industrial combustion,2007,6977.060351
+Other industrial combustion,2008,7110.801408
+Other industrial combustion,2009,7073.43659
+Other industrial combustion,2010,7730.167393
+Other industrial combustion,2011,7967.846845
+Other industrial combustion,2012,8005.787704
+Other industrial combustion,2013,8075.745221
+Other industrial combustion,2014,8003.238088
+Other industrial combustion,2015,7957.200593
+Other industrial combustion,2016,7727.32545
+Other industrial combustion,2017,7699.356751
+Other industrial combustion,2018,7800.56788
+Other industrial combustion,2019,7948.502522
+Other industrial combustion,2020,7694.344539
+Other industrial combustion,2021,8117.514499
+Other sectors,1970,1862.480524
+Other sectors,1971,1882.175511
+Other sectors,1972,1997.769322
+Other sectors,1973,2134.849047
+Other sectors,1974,2114.411454
+Other sectors,1975,2002.56517
+Other sectors,1976,2155.545872
+Other sectors,1977,2159.74383
+Other sectors,1978,2318.238981
+Other sectors,1979,2353.106881
+Other sectors,1980,2284.685875
+Other sectors,1981,2159.337504
+Other sectors,1982,2108.770706
+Other sectors,1983,2128.952483
+Other sectors,1984,2170.784867
+Other sectors,1985,2166.862638
+Other sectors,1986,2190.289247
+Other sectors,1987,2213.526544
+Other sectors,1988,2322.905253
+Other sectors,1989,2338.095572
+Other sectors,1990,2203.052288
+Other sectors,1991,2209.733445
+Other sectors,1992,2203.438769
+Other sectors,1993,2188.349666
+Other sectors,1994,2321.87092
+Other sectors,1995,2401.887656
+Other sectors,1996,2400.736746
+Other sectors,1997,2453.276107
+Other sectors,1998,2419.00411
+Other sectors,1999,2462.444754
+Other sectors,2000,2590.155844
+Other sectors,2001,2562.039412
+Other sectors,2002,2607.597151
+Other sectors,2003,2834.378594
+Other sectors,2004,2952.703414
+Other sectors,2005,3071.437424
+Other sectors,2006,3241.50335
+Other sectors,2007,3396.073732
+Other sectors,2008,3364.457485
+Other sectors,2009,3402.13376
+Other sectors,2010,3577.326997
+Other sectors,2011,3752.712523
+Other sectors,2012,3888.20947
+Other sectors,2013,3769.699395
+Other sectors,2014,3935.651393
+Other sectors,2015,3924.821764
+Other sectors,2016,3991.079424
+Other sectors,2017,4073.617064
+Other sectors,2018,4223.806736
+Other sectors,2019,4354.670231
+Other sectors,2020,4376.432727
+Other sectors,2021,4423.93704
+Power Industry,1970,3878.950834
+Power Industry,1971,3962.542391
+Power Industry,1972,4235.516003
+Power Industry,1973,4578.740001
+Power Industry,1974,4649.334369
+Power Industry,1975,4723.023848
+Power Industry,1976,5103.893543
+Power Industry,1977,5298.514891
+Power Industry,1978,5294.36037
+Power Industry,1979,5520.132607
+Power Industry,1980,5633.763741
+Power Industry,1981,5651.95856
+Power Industry,1982,5635.500916
+Power Industry,1983,5788.456888
+Power Industry,1984,5979.375471
+Power Industry,1985,6124.927857
+Power Industry,1986,6280.35237
+Power Industry,1987,6539.752269
+Power Industry,1988,6770.675202
+Power Industry,1989,7057.973494
+Power Industry,1990,7621.326364
+Power Industry,1991,7767.294299
+Power Industry,1992,7906.510957
+Power Industry,1993,7927.301608
+Power Industry,1994,8001.593096
+Power Industry,1995,8161.202443
+Power Industry,1996,8498.385618
+Power Industry,1997,8715.485176
+Power Industry,1998,8896.255621
+Power Industry,1999,8962.71366
+Power Industry,2000,9358.629396
+Power Industry,2001,9572.26356
+Power Industry,2002,9703.014377
+Power Industry,2003,10259.13817
+Power Industry,2004,10634.826
+Power Industry,2005,10977.25791
+Power Industry,2006,11414.8672
+Power Industry,2007,11907.68102
+Power Industry,2008,11915.19571
+Power Industry,2009,11721.58566
+Power Industry,2010,12500.91298
+Power Industry,2011,13100.38948
+Power Industry,2012,13384.23074
+Power Industry,2013,13612.28375
+Power Industry,2014,13675.38373
+Power Industry,2015,13363.97527
+Power Industry,2016,13431.11405
+Power Industry,2017,13736.33382
+Power Industry,2018,14188.70342
+Power Industry,2019,14075.62535
+Power Industry,2020,13487.1385
+Power Industry,2021,14257.25857
+Transport,1970,2833.821071
+Transport,1971,2912.429742
+Transport,1972,3079.7701
+Transport,1973,3255.222578
+Transport,1974,3224.315741
+Transport,1975,3307.154697
+Transport,1976,3437.863996
+Transport,1977,3557.809427
+Transport,1978,3673.073357
+Transport,1979,3738.14599
+Transport,1980,3692.086771
+Transport,1981,3676.944585
+Transport,1982,3644.967401
+Transport,1983,3679.50902
+Transport,1984,3785.534686
+Transport,1985,3863.635133
+Transport,1986,4004.964009
+Transport,1987,4144.043584
+Transport,1988,4339.934869
+Transport,1989,4463.704351
+Transport,1990,4609.333938
+Transport,1991,4647.653638
+Transport,1992,4752.262046
+Transport,1993,4793.104258
+Transport,1994,4890.262938
+Transport,1995,5023.536329
+Transport,1996,5230.796178
+Transport,1997,5308.354853
+Transport,1998,5432.417311
+Transport,1999,5593.867021
+Transport,2000,5771.368721
+Transport,2001,5802.166675
+Transport,2002,5952.534287
+Transport,2003,6077.21087
+Transport,2004,6359.503911
+Transport,2005,6500.00494
+Transport,2006,6651.998731
+Transport,2007,6858.381421
+Transport,2008,6863.526208
+Transport,2009,6724.396324
+Transport,2010,7010.856972
+Transport,2011,7126.253417
+Transport,2012,7183.722182
+Transport,2013,7371.643824
+Transport,2014,7494.775378
+Transport,2015,7726.598622
+Transport,2016,7873.239496
+Transport,2017,8073.644851
+Transport,2018,8208.569919
+Transport,2019,8223.715898
+Transport,2020,7150.253464
+Transport,2021,7640.488297

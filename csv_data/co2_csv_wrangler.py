@@ -44,13 +44,24 @@ countries = [
     "Venezuela", "Vietnam", "Western Sahara", "Yemen", "Zambia", "Zimbabwe"
 ]
 
+countries_to_ignore = [
+    "Curaçao",
+    "Gibraltar",
+    "International Aviation",
+    "International Shipping",
+    "Réunion",
+    "Saint Kitts and Nevis",
+    "São Tomé and Príncipe",
+    "Seychelles"
+]
+
 
 def process_co2_data(csv_file, valid_countries):
     # Read the CSV file
     df = pd.read_csv(csv_file)
 
-    # # Remove rows where the country is not in the valid_countries list
-    # df = df[df['Country'].isin(valid_countries)]
+    # Remove rows where the country is in the countries_to_ignore list
+    df = df[~df['Country'].isin(countries_to_ignore)]
 
     # Split 'Sudan and South Sudan' row into 'Sudan' and 'South Sudan'
     sudan_south_sudan_row = df[df['Country'] == 'Sudan and South Sudan']
@@ -78,47 +89,68 @@ def process_co2_data(csv_file, valid_countries):
     return df
 
 
-def process_co2_data_nerf(csv_file, country_names):
-    # Read the CSV file
-    df = pd.read_csv(csv_file)
+# def process_co2_data_nerf(csv_file, country_names):
+#     # Read the CSV file
+#     df = pd.read_csv(csv_file)
+#
+#     # # Remove rows where the country is not in the provided country names
+#     # df = df[df['Country'].isin(country_names)]
+#
+#     # Create a list to hold processed rows
+#     processed_rows = []
+#
+#     for _, row in df.iterrows():
+#         country = row['Country']
+#
+#         if country == "Sudan and South Sudan":
+#             # Split the row into two
+#             sudan_row = row.copy()
+#             south_sudan_row = row.copy()
+#
+#             # Split the CO2 emissions values
+#             sudan_row['Country'] = 'Sudan'
+#             south_sudan_row['Country'] = 'South Sudan'
+#
+#             # Calculate the split values
+#             sudan_row.iloc[2:] = row.iloc[2:] * 0.8763
+#             south_sudan_row.iloc[2:] = row.iloc[2:] * 0.1237
+#
+#             # Append to the processed rows
+#             processed_rows.append(sudan_row)
+#             processed_rows.append(south_sudan_row)
+#         else:
+#             processed_rows.append(row)
+#
+#     # Create a new DataFrame from processed rows
+#     processed_df = pd.DataFrame(processed_rows)
+#
+#     return processed_df
 
-    # # Remove rows where the country is not in the provided country names
-    # df = df[df['Country'].isin(country_names)]
+def calculate_total_co2_by_sector(csv_file):
+    # Read the CSV file into a DataFrame
+    data = pd.read_csv(csv_file)
 
-    # Create a list to hold processed rows
-    processed_rows = []
+    # Group by the 'Sector' column and sum the CO2 emissions across all countries for each sector
+    # Since the years are represented in columns, we sum the rows for each sector
+    co2_by_sector = data.groupby('Sector').sum(numeric_only=True)
 
-    for _, row in df.iterrows():
-        country = row['Country']
+    return co2_by_sector
 
-        if country == "Sudan and South Sudan":
-            # Split the row into two
-            sudan_row = row.copy()
-            south_sudan_row = row.copy()
 
-            # Split the CO2 emissions values
-            sudan_row['Country'] = 'Sudan'
-            south_sudan_row['Country'] = 'South Sudan'
+# Example usage: Call the function with the path to your CSV file
+csv_file_path = 'fossils_co2_by_sector.csv'  # Replace this with the actual file path
+total_co2_by_sector = calculate_total_co2_by_sector(csv_file_path)
 
-            # Calculate the split values
-            sudan_row.iloc[2:] = row.iloc[2:] * 0.8763
-            south_sudan_row.iloc[2:] = row.iloc[2:] * 0.1237
+# Display the result
+print(total_co2_by_sector)
 
-            # Append to the processed rows
-            processed_rows.append(sudan_row)
-            processed_rows.append(south_sudan_row)
-        else:
-            processed_rows.append(row)
+# save the csv
+total_co2_by_sector.to_csv('fossils_co2_total_by_sector.csv', index=False)
 
-    # Create a new DataFrame from processed rows
-    processed_df = pd.DataFrame(processed_rows)
-
-    return processed_df
-
-# Example usage
-result_df = process_co2_data('fossils_co2_transport_by_country.csv', countries)
-print(result_df)
-result_df.to_csv('fossils_co2_transport_by_country_processed.csv', index=False)
+#
+# result_df = process_co2_data('fossils_co2_power_by_country.csv', countries)
+# print(result_df)
+# result_df.to_csv('processed_fossils_co2_power_by_country.csv', index=False)
 
 # # Example usage:
 # csv_file = 'fossils_co2_transport_by_country.csv'

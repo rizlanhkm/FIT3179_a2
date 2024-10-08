@@ -1,0 +1,131 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "Global CO2 emissions by sector",
+    "data": 
+    {
+        "url": "https://raw.githubusercontent.com/rizlanhkm/FIT3179_a2/refs/heads/main/csv_data/fossils_co2_total_by_sector_transposed.csv"
+    },
+    "params": 
+    [
+        {
+            "name": "Year_until",
+            "value": 2021,
+            "bind":
+            {
+                "input": "range",
+                "min": 1970,
+                "max": 2021,
+                "step": 1,
+                "name": "Years until"
+            }
+        }
+    ],
+    "layer": 
+    [
+        {
+            "mark": 
+            {
+                "type": "line",
+                "point": 
+                {
+                    "shape": "circle"
+                }
+            },
+            "selection": 
+            {
+                "sector_highlight": 
+                {
+                    "type": "multi",
+                    "fields": ["Sector"],
+                    "bind": "legend"
+                }
+            },
+            "encoding": 
+            {
+                "x":
+                {
+                    "field": "Year", 
+                    "type": "temporal",
+                    "title": "Year",
+                    "scale": {"domain": {"param": "Year_until"}}
+                },
+                "y":
+                {
+                    "field": "CO2 Emissions",
+                    "type": "quantitative",
+                    "title": "CO2 Emissions"
+                },
+                "color":
+                {
+                    "field": "Sector",
+                    "type": "nominal",
+                    "scale": 
+                    {
+                        "scheme": "tableau10"
+                    }
+                },
+                "legend": {"format": ".1s"},
+                "tooltip":
+                [
+                    {"field": "Sector", "type": "nominal"},
+                    {"field": "Year", "type": "temporal", "timeUnit": "year"},
+                    {"field": "CO2 Emissions", "type": "quantitative", "format": ","}
+                ],
+                "opacity":
+                {
+                    "condition": 
+                    {
+                        "selection": "sector_highlight", 
+                        "value": 1
+                    },
+                    "value": 0.1
+                }
+            }
+        },
+        {
+            "mark": 
+            {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": 110,
+                "dy": -100,
+                "fontSize": 11.5,
+                "fontStyle": "italic"
+            },
+            "encoding": 
+            {
+                "text": {"value": "The power industry contributes"},
+                "color":{"value": "black"},
+                "opacity":
+                {
+                    "condition":
+                    {
+                        "test": "datum['Sector'] == 'Power Industry'", 
+                        "value": 1
+                    },
+                    "value": 0.2}
+            }
+        },
+        {
+            "mark": 
+            {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": 110,
+                "dy": -85,
+                "fontSize": 11.5,
+                "fontStyle": "italic"
+            },
+            "encoding": 
+            {
+                "text": {"value": "to the most CO2 emissions"},
+                "color":{"value": "black"},
+                "opacity":{"value": 1}
+            }
+        }
+    ]
+}

@@ -137,28 +137,6 @@ def calculate_total_co2_by_sector(csv_file):
     return co2_by_sector
 
 
-def transpose_year_columns(csv_file):
-    # Read the CSV file into a DataFrame
-    data = pd.read_csv(csv_file)
-
-    # Use pd.melt to transpose the year columns into rows
-    # 'Sector' and 'Country' are kept as identifiers, while the year columns become rows
-    melted_data = pd.melt(data, id_vars=['Sector'], var_name='Year', value_name='CO2 Emissions').sort_values(by=['Sector', 'Year'])
-
-    return melted_data
-
-
-# Example usage: Call the function with the path to your CSV file
-csv_file_path = 'fossils_co2_total_by_sector.csv'  # Replace this with the actual file path
-transposed_data = transpose_year_columns(csv_file_path)
-
-# Display the result
-print(transposed_data)
-
-# save the csv
-transposed_data.to_csv('fossils_co2_total_by_sector_transposed.csv', index=False)
-
-
 # # Example usage: Call the function with the path to your CSV file
 # csv_file_path = 'fossils_co2_by_sector.csv'  # Replace this with the actual file path
 # total_co2_by_sector = calculate_total_co2_by_sector(csv_file_path)

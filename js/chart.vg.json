@@ -22,6 +22,10 @@
             }
         }
     ],
+    "transform": 
+    [
+        {"filter": "year(datum.Year) <= Year_until"}
+    ],
     "layer": 
     [
         {
@@ -103,10 +107,11 @@
                 {
                     "condition":
                     {
-                        "test": "datum['Sector'] == 'Power Industry'", 
+                        "test": "sector_highlight['Sector'] == 'Power Industry'", 
                         "value": 1
                     },
-                    "value": 0.2}
+                    "value": 0.1
+                }
             }
         },
         {
@@ -124,7 +129,15 @@
             {
                 "text": {"value": "to the most CO2 emissions"},
                 "color":{"value": "black"},
-                "opacity":{"value": 1}
+                "opacity":
+                {
+                    "condition":
+                    {
+                        "test": "sector_highlight['Sector'] == 'Power Industry'", 
+                        "value": 1
+                    },
+                    "value": 0.2
+                }
             }
         }
     ]

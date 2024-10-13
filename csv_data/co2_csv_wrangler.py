@@ -85,7 +85,7 @@ def split_sudan_south_sudan(csv_file):
 
         # Rename the countries
         sudan_row['Country'] = 'Sudan'
-        south_sudan_row['Country'] = 'South Sudan'
+        south_sudan_row['Country'] = 'S. Sudan'
 
         # Split the emissions data
         for year in sudan_south_sudan_row.columns[2:]:

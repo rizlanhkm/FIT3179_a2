@@ -1,0 +1,84 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "GDP per Capita by Malaysian States in 2021",
+    "width": 650,
+    "height": 400,
+    "projection": {"type": "equirectangular"},
+    "layer": 
+    [
+      {
+        "data": 
+        {
+          "url": "https://raw.githubusercontent.com/jnewbery/CartogramMalaysia/refs/heads/master/public/data/malaysia-states.topojson",
+          "format": 
+          {
+            "type": "topojson",
+            "feature": "states"
+          }
+        },
+        "mark": 
+        {
+          "type": "geoshape",
+          "fill": "lightgray",
+          "stroke": "black",
+          "strokeWidth": 0.5
+        }
+      },
+      {
+        "data": 
+        {
+          "url": "https://raw.githubusercontent.com/jnewbery/CartogramMalaysia/refs/heads/master/public/data/malaysia-states.topojson",
+          "format": 
+          {
+            "type": "topojson",
+            "feature": "states"
+          }
+        },
+        "transform": 
+        [
+          {
+            "lookup": "properties.Name",
+            "from": 
+            {
+              "data": 
+              {
+                "url": "https://raw.githubusercontent.com/rizlanhkm/FIT3179_a2/refs/heads/main/csv_data/malaysia_states_gdp_per_capita.csv",
+                "format": {"type": "csv"}
+              },
+              "key": "State",
+              "fields": ["GDP per Capita"]
+            }
+          }
+        ],
+        "mark": {"type": "geoshape"},
+        "encoding": 
+        {
+          "color": 
+          {
+            "field": "GDP per Capita",
+            "type": "quantitative",
+            "scale": {"scheme": "reds"}
+          },
+          "tooltip": 
+          [
+            {"field": "properties.Name", "type": "nominal", "title": "State"},
+            {"field": "GDP per Capita", "type": "quantitative", "title": "GDP per Capita"}
+          ]
+        }
+      },
+      {
+        "mark": 
+        {
+          "type": "text",
+          "align": "right",
+          "baseline": "middle",
+          "fontSize": 12,
+          "fontStyle": "italic"
+        },
+        "encoding": 
+        {
+          "text": {"value": ""}
+        }
+      }
+    ]
+  }

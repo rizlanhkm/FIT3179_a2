@@ -55,13 +55,22 @@ countries_to_ignore = [
     "Seychelles"
 ]
 
-
+# remove rows with countries to ignore and split sudan and south sudan
 def process_co2_data(csv_file, valid_countries):
     # Read the CSV file
     df = pd.read_csv(csv_file)
 
     # Remove rows where the country is in the countries_to_ignore list
     df = df[~df['Country'].isin(countries_to_ignore)]
+
+    split_sudan_south_sudan(csv_file)
+
+    return df
+
+# split sudan and south sudan
+def split_sudan_south_sudan(csv_file):
+    # Read the CSV file
+    df = pd.read_csv(csv_file)
 
     # Split 'Sudan and South Sudan' row into 'Sudan' and 'South Sudan'
     sudan_south_sudan_row = df[df['Country'] == 'Sudan and South Sudan']
@@ -87,7 +96,6 @@ def process_co2_data(csv_file, valid_countries):
         df = pd.concat([df, sudan_row, south_sudan_row], ignore_index=True)
 
     return df
-
 
 # def process_co2_data_nerf(csv_file, country_names):
 #     # Read the CSV file
@@ -137,15 +145,17 @@ def calculate_total_co2_by_sector(csv_file):
     return co2_by_sector
 
 
-# # Example usage: Call the function with the path to your CSV file
-# csv_file_path = 'fossils_co2_by_sector.csv'  # Replace this with the actual file path
-# total_co2_by_sector = calculate_total_co2_by_sector(csv_file_path)
-#
-# # Display the result
-# print(total_co2_by_sector)
-#
-# # save the csv
-# total_co2_by_sector.to_csv('fossils_co2_total_by_sector.csv', index=False)
+
+
+# Example usage: Call the function with the path to your CSV file
+csv_file_path = 'fossils_co2_total_by_country.csv'
+total_co2_by_country = split_sudan_south_sudan(csv_file_path)
+
+# Display the result
+print(total_co2_by_country)
+
+# save the csv
+total_co2_by_country.to_csv('processed_fossils_co2_total_by_country.csv', index=False)
 
 
 #

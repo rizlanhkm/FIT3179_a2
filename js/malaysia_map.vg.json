@@ -1,9 +1,46 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "beige",
     "title": "GDP per Capita by Malaysian States in 2021",
-    "width": 650,
+    "width": 1000,
     "height": 400,
-    "projection": {"type": "equirectangular"},
+    "projection": 
+    {
+        "type": "equirectangular",
+        "center": {"expr": "center_to"},
+        "scale": {"expr": "zoom_level"}
+    },
+    "params": 
+    [
+      {
+        "name": "center_to",
+        "value": [107.9758, 4.2105],
+        "bind":
+        {
+          "input": "select",
+          "options": 
+          [
+            [107.9758, 4.2105],
+            [101.6869, 3.1390],
+            [112.3390, 5.3183],
+            [100.3759, 5.3875]
+          ],
+          "labels": ["Malaysia", "Kuala Lumpur", "Labuan", "Penang"],
+          "name": "Map Center: "
+        }
+      },
+      {
+        "name": "zoom_level",
+        "value": 3000,
+        "bind": {
+        "input": "range",
+        "min": 3000,
+        "max": 60000,
+        "step": 100,
+        "name": "Zoom: "
+        }
+        }
+    ],
     "layer": 
     [
       {
@@ -16,13 +53,21 @@
             "feature": "states"
           }
         },
+        "transform": 
+        [
+            {
+                "calculate": "'Data is not available for ' + datum.properties.Name",
+                "as": "note"
+            }
+        ],
         "mark": 
         {
           "type": "geoshape",
           "fill": "lightgray",
           "stroke": "black",
           "strokeWidth": 0.5
-        }
+        },
+        "encoding": {"tooltip": {"field": "note"}}
       },
       {
         "data": 

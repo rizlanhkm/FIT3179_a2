@@ -1,53 +1,79 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "https://raw.githubusercontent.com/rizlanhkm/FIT3179_a2/refs/heads/main/csv_data/malaysia_urbanization_rate.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "beige",
+  "data": {
+    "url": "https://raw.githubusercontent.com/rizlanhkm/FIT3179_a2/refs/heads/main/csv_data/malaysia_urbanization_rate.csv"
+  },
+  "vconcat": [
+    {
+      "title": "Urban vs Non-urban population in Malaysia (%)",
+      "width": 300,
+      "height": 300,
+      "mark": {"type": "arc", "innerRadius": 100},
+      "transform": 
+      [
+        {"filter": "year(datum.Year) == Current_Year"}
+      ],
+      "encoding": {
+        "theta": {"field": "value", "type": "quantitative"},
+        "color": {"field": "Category", "type": "nominal"}
+      }
     },
-    "hconcat": 
-    [
+    {
+      "title": "Change in Malaysian urban population from previous year (%)",
+      "width": 300,
+      "height": 100,
+      "mark": 
       {
-        "width": 300,
-        "height": 300,
-        "mark": {"type": "arc", "innerRadius": 100},
-        "encoding": 
+        "type": "line",
+        "point": 
         {
-          "theta": {"field": "value", "type": "quantitative"},
-          "color": {"field": "category", "type": "nominal"}
+          "shape": "circle"
         }
       },
-      {
-        "width": 300,
-        "height": 300,
-        "mark": {"type": "line"},
-        "encoding": 
-        {
-          "x": {"field": "Year", "type": "temporal"},
-          "y": {"field": "Change from previous year", "type": "quantitative"}
-        }
-      }
-    ],
-    "params": 
+      "transform": 
       [
-          {
-              "name": "Current_Year",
-              "value": 2021,
-              "bind":
-              {
-                  "input": "range",
-                  "min": 1970,
-                  "max": 2021,
-                  "step": 1,
-                  "name": "Current Year"
-              }
-          }
+        {"filter": "year(datum.Year) <= Current_Year"}
       ],
-    "transform": 
-    [
-      {"filter": "year(datum.Year) == Current_Year"},
-      {
-        "fold": ["Percentage of Total Urban", "Percentage of Non-urban"],
-        "as": ["category", "value"]
+      "encoding": {
+        "x": 
+        {
+          "field": "Year",
+          "type": "temporal",
+          "title": "Year",
+          "scale": {"domain": {"param": "Current_Year"}}
+        },
+        "y": 
+        {
+          "field": "Change from previous year (%)",
+          "type": "quantitative",
+          "title": "Change from previous year (%)"
+        },
+        "tooltip":
+        [
+          {"field": "Year", "type": "temporal", "timeUnit": "year"},
+          {"field": "Change from previous year (%)", "type": "quantitative"}
+        ]
       }
-    ]
-  }
-  
+    }
+  ],
+  "params": [
+    {
+      "name": "Current_Year",
+      "value": 2021,
+      "bind": {
+        "input": "range",
+        "min": 1970,
+        "max": 2021,
+        "step": 1,
+        "name": "Current Year"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "fold": ["Percentage of Total Urban", "Percentage of Non-urban"],
+      "as": ["Category", "value"]
+    }
+  ]
+}

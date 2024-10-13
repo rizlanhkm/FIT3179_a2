@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:gray;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    font: Helvetica;
+}
+
+.header {
+    background-color: gray;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.parent{
+    display: flex;
+    justify-content: flex-start;
+    height: 250px;
+}
+
+.container {
+    width: 1200px;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: 992px) and (max-width: 1439px) {
+        max-width: 1279px !important;
+        padding: 0 !important;
+        margin: 0 80px !important;
+        width: auto !important;
+    }
+
+    @media screen and (max-width: 991px) {
+      max-width: 959px !important;
+      margin: 0 16px !important;
+      padding: 0 !important;
+      width: auto !important;
+    }
+}
+
+.cards {
+    background-color: beige;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.vis {
+    padding: 20px;
+}

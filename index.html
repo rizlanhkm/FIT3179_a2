@@ -15,13 +15,26 @@
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
 
     </head>
     
     <body>
+        <header>
+            <div class="header">
+                <h1>Big title</h1>
+                <p>Test</p>
+            </div>
+        </header>
         <div class="container">
             <div class="cards">
-                <h1>Global CO2 emission by country</h1>
+                <div class="vis-headers">
+                    <h1>The World's emissions</h1>
+                    <p>As time passes, technology advances to further heights and humans become increasingly dependable upon them. This leads to greater need for energy and higher emissions of CO2 around the world.</p>
+                    <p>The diagram below visualises the amount of CO2 emitted by differnt countries throughout recent years, starting from 1970.</p>
+                    <p style="font-size: small; font-style: italic;">(Use the slider at the bottom to navigate through the years)</p>
+                </div>
                 <!-- map vis -->
                 <div>
                     <div id="map_chart" class="vis"></div>
@@ -29,11 +42,48 @@
             </div>
 
             <div class="cards">
+                <div class="vis-headers">
+                    <h1>Emissions by sector</h1>
+                    <p>Test</p>
+                </div>
                 <!-- line vis -->
                 <div>
                     <div id="line_chart" class="vis"></div>
                 </div>
             </div>
+
+            <div class="cards">
+                <div class="vis-headers">
+
+                </div>
+                <!-- donut and line vis -->
+                <div class="pure-g">
+                    <div class="pure-u-1-2">
+                        <h1>Urbanization in Malaysia</h1>
+                        <p>Test</p>
+                    </div>
+                    <div id="urban_chart" class="vis pure-u-1-2" style="padding: 20px;"></div>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="vis-headers">
+                    <h1>Malaysian States' GDP per Capita in 2021</h1>
+                </div>
+                <!-- malaysia map vis -->
+                 <div id="malaysia_map" class="vis" style="padding: 20px;"></div>
+            </div>
+
+            <div class="cards">
+                <h1>References</h1>
+                <h3>Data sources:</h3>
+            </div>
         </div>
+
+        <footer>
+            <div class="footer">
+                <p>© Rizlan Mohamed Reza, FIT3179</p>
+            </div>
+        </footer>
     </body>
 </html>

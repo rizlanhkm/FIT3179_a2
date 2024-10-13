@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "beige",
   "title": "CO2 emissions by country",
   "width": 1000,
   "height": 400,
@@ -43,7 +44,7 @@
       "mark": {
         "type": "geoshape",
         "fill": "lightgray",
-        "stroke": "white"
+        "stroke": "black"
       }
     },
     {
@@ -59,7 +60,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/rizlanhkm/FIT3179_a2/refs/heads/main/csv_data/fossils_co2_total_by_country.csv",
+              "url": "https://raw.githubusercontent.com/rizlanhkm/FIT3179_a2/refs/heads/main/csv_data/processed_fossils_co2_total_by_country.csv",
               "format": {"type": "csv"}
             },
             "key": "Country",

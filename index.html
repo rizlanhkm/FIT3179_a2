@@ -11,21 +11,29 @@
     
         <script src="js/charts.js"></script>
     
-        <title>Global CO2 emission by country</title>
+        <title>Global CO2 emission</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+
     </head>
     
     <body>
-        <h1>Global CO2 emission by country</h1>
-        <div class="pure-g">
-            <!-- map vis -->
-             <div class="pure-u-1 pure-u-md-1-2 vis-container">
-                <div id="map_chart" class="vis"></div>
-             </div>
+        <div class="container">
+            <div class="cards">
+                <h1>Global CO2 emission by country</h1>
+                <!-- map vis -->
+                <div>
+                    <div id="map_chart" class="vis"></div>
+                </div>
+            </div>
 
-             <!-- line vis -->
-              <div class="pure-u-1 pure-u-md-1-3 vis-container">
-                <div id="line_chart" class="vis"></div>
-              </div>
+            <div class="cards">
+                <!-- line vis -->
+                <div>
+                    <div id="line_chart" class="vis"></div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

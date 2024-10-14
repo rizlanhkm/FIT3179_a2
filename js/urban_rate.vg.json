@@ -9,15 +9,36 @@
       "title": "Urban vs Non-urban population in Malaysia (%)",
       "width": 300,
       "height": 300,
-      "mark": {"type": "arc", "innerRadius": 100},
-      "transform": 
-      [
-        {"filter": "year(datum.Year) == Current_Year"}
-      ],
-      "encoding": {
-        "theta": {"field": "value", "type": "quantitative"},
-        "color": {"field": "Category", "type": "nominal"}
-      }
+      "layer": 
+      [ 
+        {
+          "mark": {"type": "arc", "innerRadius": 100},
+          "transform": 
+          [
+            {"filter": "year(datum.Year) == Current_Year"}
+          ],
+          "encoding": {
+            "theta": {"field": "value", "type": "quantitative"},
+            "color": {"field": "Category", "type": "nominal"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "middle",
+            "dx": 0,
+            "dy": 0,
+            "fontSize": 20,
+            "fontWeight": "bold"
+          },
+          "encoding": {
+            "text": {"value": "Center Text"},
+            "x": {"signal": "width / 2"},
+            "y": {"signal": "height / 2"}
+          }
+        }
+      ]
     },
     {
       "title": "Change in Malaysian urban population from previous year (%)",

@@ -12,7 +12,7 @@
     [
         {
             "name": "Year_until",
-            "value": 2021,
+            "value": 1970,
             "bind":
             {
                 "input": "range",

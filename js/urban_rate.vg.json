@@ -33,9 +33,7 @@
             "fontWeight": "bold"
           },
           "encoding": {
-            "text": {"field": "text annotation %"},
-            "x": {"signal": "width / 2"},
-            "y": {"signal": "height / 2"}
+            "text": {"field": "text annotation %"}
           },
           "transform": 
           [
@@ -52,9 +50,7 @@
             "fontSize": 20
           },
           "encoding": {
-            "text": {"field": "text annotation year"},
-            "x": {"signal": "width / 2"},
-            "y": {"signal": "height / 2"}
+            "text": {"field": "text annotation year"}
           },
           "transform": 
           [
@@ -72,9 +68,7 @@
             "fontWeight":"lighter"
           },
           "encoding": {
-            "text": {"field": "text annotation live in"},
-            "x": {"signal": "width / 2"},
-            "y": {"signal": "height / 2"}
+            "text": {"field": "text annotation live in"}
           }
         }
       ]

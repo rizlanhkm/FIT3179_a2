@@ -103,16 +103,7 @@
             "encoding": 
             {
                 "text": {"value": "The power industry contributes"},
-                "color":{"value": "black"},
-                "opacity":
-                {
-                    "condition":
-                    {
-                        "test": "sector_highlight['Sector'] == 'Power Industry'", 
-                        "value": 1
-                    },
-                    "value": 0.1
-                }
+                "opacity": {"value": 1}
             }
         },
         {
@@ -129,16 +120,7 @@
             "encoding": 
             {
                 "text": {"value": "to the most CO2 emissions"},
-                "color":{"value": "black"},
-                "opacity":
-                {
-                    "condition":
-                    {
-                        "test": "sector_highlight['Sector'] == 'Power Industry'", 
-                        "value": 1
-                    },
-                    "value": 0.2
-                }
+                "opacity":{"value": 1}
             }
         }
     ]

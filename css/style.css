@@ -10,19 +10,24 @@ h1 {
 }
 
 p {
-    font: Helvetica;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header {
     background-color: gray;
-    color: black;
+    color: white;
     padding: 10px 0;
     text-align: center;
     font-size: 2em;
+    text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,   
+    -1px 1px 0 #000,   
+    1px 1px 0 #000;
 }
 
 .footer {
-    background-color: black;
+    background-color: rgb(27, 27, 27);
     color: white;
     padding: 10px 0;
     text-align: center;

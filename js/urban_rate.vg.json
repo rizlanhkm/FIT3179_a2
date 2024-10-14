@@ -12,7 +12,7 @@
       "layer": 
       [ 
         {
-          "mark": {"type": "arc", "innerRadius": 100},
+          "mark": {"type": "arc", "innerRadius": 120},
           "transform": 
           [
             {"filter": "year(datum.Year) == Current_Year"}
@@ -29,11 +29,50 @@
             "baseline": "middle",
             "dx": 0,
             "dy": 0,
-            "fontSize": 20,
+            "fontSize": 35,
             "fontWeight": "bold"
           },
           "encoding": {
-            "text": {"value": "Center Text"},
+            "text": {"field": "text annotation %"},
+            "x": {"signal": "width / 2"},
+            "y": {"signal": "height / 2"}
+          },
+          "transform": 
+          [
+            {"filter": "(datum.Category == 'Percentage of Total Urban') && (year(datum.Year) == Current_Year)"}
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "middle",
+            "dx": 0,
+            "dy": -40,
+            "fontSize": 20
+          },
+          "encoding": {
+            "text": {"field": "text annotation year"},
+            "x": {"signal": "width / 2"},
+            "y": {"signal": "height / 2"}
+          },
+          "transform": 
+          [
+            {"filter": "(year(datum.Year) == Current_Year)"}
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "middle",
+            "dx": 0,
+            "dy": 40,
+            "fontSize": 20,
+            "fontWeight":"lighter"
+          },
+          "encoding": {
+            "text": {"field": "text annotation live in"},
             "x": {"signal": "width / 2"},
             "y": {"signal": "height / 2"}
           }
@@ -95,6 +134,22 @@
     {
       "fold": ["Percentage of Total Urban", "Percentage of Non-urban"],
       "as": ["Category", "value"]
+    },
+    {
+      "calculate": "datum.value + '%'",
+      "as": "text annotation %"
+    },
+    {
+      "calculate": "'In ' + Current_Year + ','",
+      "as": "text annotation year"
+    },
+    {
+      "calculate": "'of Malaysians lived;in urban areas'",
+      "as": "text annotation live in raw"
+    },
+    {
+      "calculate": "split(datum['text annotation live in raw'], ';')",
+      "as": "text annotation live in"
     }
   ]
 }

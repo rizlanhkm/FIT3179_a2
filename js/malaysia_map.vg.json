@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "background": "beige",
-    "title": "GDP per Capita by Malaysian States in 2021",
+    "title": "GDP by Malaysian States in 2021",
     "width": 1000,
     "height": 400,
     "projection": 
@@ -87,11 +87,11 @@
             {
               "data": 
               {
-                "url": "https://raw.githubusercontent.com/rizlanhkm/FIT3179_a2/refs/heads/main/csv_data/malaysia_states_gdp_per_capita.csv",
+                "url": "https://raw.githubusercontent.com/rizlanhkm/FIT3179_a2/refs/heads/main/csv_data/malaysia_states_gdp.csv",
                 "format": {"type": "csv"}
               },
               "key": "State",
-              "fields": ["GDP per Capita"]
+              "fields": ["GDP 2021"]
             }
           }
         ],
@@ -100,14 +100,14 @@
         {
           "color": 
           {
-            "field": "GDP per Capita",
+            "field": "GDP 2021",
             "type": "quantitative",
             "scale": {"scheme": "reds"}
           },
           "tooltip": 
           [
             {"field": "properties.Name", "type": "nominal", "title": "State"},
-            {"field": "GDP per Capita", "type": "quantitative", "title": "GDP per Capita"}
+            {"field": "GDP 2021", "type": "quantitative", "title": "GDP in 2021"}
           ]
         }
       },

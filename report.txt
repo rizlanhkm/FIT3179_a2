@@ -1,0 +1,30 @@
+Domain:
+Global CO2 emissions and its factors
+
+Why?
+The demand for energy causes an increase in carbon emissions. 
+Since carbon emissions contribute to global warming, we need to raise public awareness towards carbon footprint so they are aware of the consequences of their actions and try to minimise their carbon footprint as much as possible
+
+Who?
+Mostly aimed at the general population to be wary of their carbon footprint.
+Corporate companies should also take note of their carbon footprint as large corporations tend to contribute to carbon emissions the most.
+The government should also be responsible in making their governing area a greener one.
+
+What?
+1. World CO2 emission by EDGAR (https://edgar.jrc.ec.europa.eu/report_2022?vis=gdp#data_download)
+    a. wrangling was done to standardize the name with the topojson file.
+    b. extracted the necessary excel sheets into separate excel csv files.
+    c. the main dataset.
+
+2. Malaysia Urbanization rate (https://www.macrotrends.net/global-metrics/countries/MYS/malaysia/urban-population)
+    a. Amount of CO2 emission has a positive relationship with the percentage of urban population.
+    b. a column was added to complement the urban population (non-urban population).
+
+3. Malaysian states by GDP (https://en.wikipedia.org/wiki/List_of_Malaysian_states_by_GDP)
+    a. Amount of CO2 emission has a positive relationship with the GDP of a country/area.
+    b. data was manually extracted for GDP of 2021.
+
+How?
+Map: Easy to visualise data from each country and spot the country that you want to see without having to read each name (given that you know its geographic location).
+Pointed Line Chart: Viewers can easily pinpoint the value and time of a plotted data and the points make it easier to find the data points.
+Donut Chart: Makes comparison between 2 variables straightforward as it is simple enough to view.

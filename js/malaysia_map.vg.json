@@ -107,7 +107,7 @@
           "tooltip": 
           [
             {"field": "properties.Name", "type": "nominal", "title": "State"},
-            {"field": "GDP 2021", "type": "quantitative", "title": "GDP in 2021"}
+            {"field": "GDP 2021", "type": "quantitative", "title": "GDP in 2021 (RM million)"}
           ]
         }
       },

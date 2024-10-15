@@ -91,7 +91,7 @@
                 "format": {"type": "csv"}
               },
               "key": "State",
-              "fields": ["GDP 2021"]
+              "fields": ["GDP 2021 (RM million)"]
             }
           }
         ],
@@ -100,14 +100,14 @@
         {
           "color": 
           {
-            "field": "GDP 2021",
+            "field": "GDP 2021 (RM million)",
             "type": "quantitative",
             "scale": {"scheme": "reds"}
           },
           "tooltip": 
           [
             {"field": "properties.Name", "type": "nominal", "title": "State"},
-            {"field": "GDP 2021", "type": "quantitative", "title": "GDP in 2021 (RM million)"}
+            {"field": "GDP 2021 (RM million)", "type": "quantitative", "title": "GDP in 2021 (RM million)"}
           ]
         }
       },
